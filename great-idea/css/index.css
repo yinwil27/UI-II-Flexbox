@@ -1,66 +1,77 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+.container {
+  width: 500px;
+  margin: 0 auto;
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+/*   flex-direction: row | row-reverse | column | column-reverse; */
+
+/*   flex-wrap: nowrap | wrap | wrap-reverse;
+ */
+
+/* flex-flow: <‘flex-direction’> || <‘flex-wrap’> */
+
+/*   justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly; */
+
+/*   align-items: flex-start | flex-end | center | baseline | stretch; */
+
+/*   align-content: flex-start | flex-end | center | space-between | space-around | stretch; */
+
+.container header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+header .logo {
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
+  align-self: flex-start;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+.container nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+.container nav a {
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+/*   order: <integer>;  default is 0 */
+
+/*   align-self: auto | flex-start | flex-end | center | baseline | stretch; */
+
+
+.container nav a.item1 {
+  order: 0;
+}
+
+.container nav a.item2 {
+  order: 0;
+}
+
+.container nav a.item3 {
+  order: 0;
+}
+
+.container nav a.item4 {
+  order: 0;
+}
+
+.columns {
+  display: flex;
+}
+
+.columns p {
+  margin: 10px;
+}
+
+/* Services page only! */
+
+.services .main-content h1 {
+  color: red;
+}
